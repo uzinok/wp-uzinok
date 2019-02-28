@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link href="http://uzinok.ru/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="http://uzinok.ru/img/favicon.ico" type="image/x-icon"><meta itemprop="image" content="http://uzinok.ru/img/cat-logo_64.png"><meta name="twitter:image:src" content="http://uzinok.ru/img/cat-logo_64.png"><meta property="og:image" content="http://uzinok.ru/img/cat-logo_64.png"><link rel="stylesheet" href="css/style.css" type="text/css"><link rel="preload" href="fonts/Robotocondensed.woff2" as="font"><link rel="preload" href="fonts/Robotocondensedlight.woff2" as="font"><link rel="preload" href="fonts/Roboto.woff2" as="font"><link rel="preload" href="fonts/Robotolight.woff2" as="font"><title>Демки JS</title><script src="js/main.js"></script></head><body><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="cat-logo" viewbox="0 0 117 92"><path d="M107.8 51.6c0 20.9-21.7 39.3-47.6 39.3S11.8 72.5 11.8 51.6c0-8.4 2.5-15.9 8.4-22.6 5-5.8 12.5-10.9 20.9-13.4 5.8-1.7 12.5-2.5 19.2-2.5 25.8-.8 47.5 16.8 47.5 38.5z"></path><path d="M97 .6c3.3 9.2 2.5 19.2 0 28.4L76.1 17.4C85.3 8.2 92.8 1.5 97 .6zM20.9 2.3c7.5 3.3 14.2 9.2 20 15.9l-20 12.5c-4.1-10-5-20 0-28.4z"></path><ellipse fill="#FFF" cx="76.9" cy="49.1" rx="9.2" ry="6.7"></ellipse><ellipse fill="#FFF" cx="40.2" cy="49.1" rx="9.2" ry="6.7"></ellipse><ellipse cx="40.2" cy="50.8" rx="1.7" ry="4.2"></ellipse><ellipse cx="76.9" cy="50.8" rx="1.7" ry="4.2"></ellipse><path stroke="#000" stroke-miterlimit="10" d="M115.3 61.6l-9.2-1.7m10.1 16.8l-15-6.7m9.1 20.9L91.9 78.3M2.6 61.6L13.4 60M.9 75.8l16.7-6.7M7.6 90l19.2-11.7"></path></symbol><symbol id="user_auth"><path d="M93 90.8H49V51.5H32.3L71 13.7l38.7 37.8H93v39.3zm18 18.9c2.6 0 4.7-2.1 4.7-4.7V75.9h11.2v29.8c0 8.4-6.8 15.2-15.2 15.2H30.4c-8.4 0-15.2-6.8-15.2-15.2V75.9h11.2V105c0 2.6 2.1 4.7 4.7 4.7H111z"></path><path fill="none" d="M0 0h139v133H0z"></path></symbol><symbol id="user_no_auth"><path d="M99.1 113.7c2.6 0 4.7-2.1 4.7-4.7V79.9H115v29.8c0 8.4-6.8 15.2-15.2 15.2H18.5c-8.4 0-15.2-6.8-15.2-15.2V79.9h11.2V109c0 2.6 2.1 4.7 4.7 4.7h79.9zm-62-96H81V57h16.8L59.1 94.8 20.4 57h16.8V17.7h-.1z"></path><path fill="none" d="M0 0h124v132H0z"></path></symbol></svg></div><header class="page-header container page-header--nojs"><div class="page-header__block-logo"><a href="index.html" class="page-header__logo-text"><svg width="60" height="60" class="page-header__logo-svg"><use xlink:href="#cat-logo"></use></svg> uzinok.ru</a></div><button class="page-header__button-nav-toggle page-header__button-nav-toggle--closed"><span class="visually-hidden">открыть/закрыть меню</span></button><nav class="page-header__block-nav page-header__block-nav--closed"><ul class="page-header__nav-list list-rezet"><li class="menu-item"><a href="/authorisation.html">Авторизация</a></li><li class="menu-item"><a href="/demo-js.html">Демки JS</a></li><li class="menu-item"><a href="/demo-html-css-js.html">Демки CSS</a></li><li class="menu-item"><a href="/canvas_test.html">Демки canvas</a></li><li class="menu-item"><a href="/svg.html">Демки SVG</a></li></ul></nav></header><main class="page-main"><div class="page-title"><div class="container"><h1 class="page-title__text">Демки</h1><p class="page-title__subtitle">JS демки. Всяко разно)) Все скриты и стили без префиксов и подобной чепухи. Работают в Google chrome без префиксеров(CSS) в актуальных версиях с 2019года</p></div></div><section class="container container--column"><div class="container container--two-column"><h2 class="section-header">Анимашка на snap.svg: JS - SVG <span class="page-text--small">работает ведзде, используется библиотека snap.svg-min.js</span></h2><script src="js/snap.svg-min.js"></script><script>$(document).ready(function () {
+
+            var path = Snap.select("#u"),
+              path_out = Snap.select("#out_u").attr("d"),
+              path_to = Snap.select("#to_u").attr("d"),
+              svg_u = $("#svg_u");
+
+            svg_u.hover(function () {
+                path.animate({
+                  d: path_to
+                }, 150, mina.linear);
+              },
+              function () {
+                path.animate({
+                  d: path_out
+                }, 150, mina.linear);
+              }
+            );
+
+          });</script><svg viewBox="0 0 96.8 95.3" id="svg_u" style="cursor: pointer; display:block; margin: 0 auto" width="260" height="255"><g fill="#580590"><path d="M91.9,8.5v49.4c0,11.3-2,19.6-6.1,24.8c-6.6,8.4-19,12.6-37.3,12.6c-12.2, 0-22.1-2-29.6-6.1c-5.4-2.9-9.1-7.1-11.1-12.6 c-1.8-5-2.8-11.3-2.8-18.8V8.5c0-1.7-0.4-3-1.1-3.9C3.1,3.7,1.8,2.9,0,2.3V0h30.4v2.3c-1.9,0.6-3.2,1.3-3.9,2.2 c-0.7,0.9-1.1,2.2-1.1,4v44.9c0,5.2,0.4,9.2,1.3,12c0.8,2.8,2.3,5.1,4.4,6.8c4.2,3.6,10.3,5.4,18.2,5.4c7.9,0,14-1.8,18.2-5.4 c2-1.8,3.5-4.1,4.3-6.8c0.8-2.8,1.2-6.8,1.2-12V8.5c0-1.7-0.3-3-1-3.9c-0.7-0.9-2-1.6-3.9-2.3V0h28.6v2.3C95,2.9,93.7,3.6,93,4.5 C92.3,5.5,91.9,6.8,91.9,8.5z" id="u"></path></g><defs><path d="M96.9,1.9c0.1,2.6-0.6,4.3-2.3,5.3c-1.5,0.6-3,1.1-4.4,1.6c-2.1,1-3.6,2.4-4.5,4.4c-0.6,1.4-1.1,4.1-1.5,8 c-0.2,2.2-0.4,7.2-0.4,14.8c0,15.6-2.5,28.9-7.4,39.9C71,88.6,63.4,94.8,53.8,94.8c-11.2,0-20.2-3.9-27-11.6 C19.1,74.6,15,62,14.4,45.2c-0.1-1.7-0.1-3.4-0.1-5.2c0-2.6,0.1-6.4,0.3-11.5c0.2-5.1,0.3-8.9,0.3-11.4c0-3-1-5-3.1-6 c-0.8-0.4-2.8-0.8-6.2-1.3C3.4,9.5,1.9,9,1.2,8.5C0.4,7.8,0,6.5,0,4.5c0-2.2,1.3-3.4,3.8-3.4c2.7,0,6.7,0.1,12.1,0.4 C21.2,1.8,25.3,2,28,2c0.9,0,4.1,0,9.6,0c3.9,0,7.1,0,9.6,0c1,0,2.3,0,4.1-0.1c1.9-0.1,3.2-0.2,4-0.2c2.3,0,3.4,0.9,3.4,2.8 c0,1.7-0.6,3-1.9,4c-1,0.8-2.2,1.2-3.4,1.2c-3.8,0.1-5.6,2.2-5.6,6.3c0,2.5,0.1,6.3,0.3,11.3c0.2,5,0.3,8.8,0.3,11.3 c0,1.6,0,4.1,0.1,7.4c0.1,3.3,0.1,5.8,0.1,7.4c0,5.8,1,11,3.1,15.7c2.3,5.2,5.2,7.8,8.7,7.8c4.9,0,8.7-3.8,11.6-11.5 c2.4-6.4,3.6-13.7,3.6-21.9c0-6.5-0.5-12.8-1.4-19C73,15.8,71,11,68.3,10.3c-1.4-0.2-2.8-0.5-4.3-0.7c-1.9-0.5-2.8-1.7-2.8-3.4 c0-3.1,1.2-4.7,3.7-4.7l15.5,0.2c1.7,0,4.1-0.3,7.3-0.8C90.8,0.3,93.2,0,94.8,0C95.4,0,96.1,0.6,96.9,1.9z" id="to_u"></path><path d="M91.9,8.5v49.4c0,11.3-2,19.6-6.1,24.8c-6.6,8.4-19,12.6-37.3,12.6c-12.2, 0-22.1-2-29.6-6.1c-5.4-2.9-9.1-7.1-11.1-12.6 c-1.8-5-2.8-11.3-2.8-18.8V8.5c0-1.7-0.4-3-1.1-3.9C3.1,3.7,1.8,2.9,0,2.3V0h30.4v2.3c-1.9,0.6-3.2,1.3-3.9,2.2 c-0.7,0.9-1.1,2.2-1.1,4v44.9c0,5.2,0.4,9.2,1.3,12c0.8,2.8,2.3,5.1,4.4,6.8c4.2,3.6,10.3,5.4,18.2,5.4c7.9,0,14-1.8,18.2-5.4 c2-1.8,3.5-4.1,4.3-6.8c0.8-2.8,1.2-6.8,1.2-12V8.5c0-1.7-0.3-3-1-3.9c-0.7-0.9-2-1.6-3.9-2.3V0h28.6v2.3C95,2.9,93.7,3.6,93,4.5 C92.3,5.5,91.9,6.8,91.9,8.5z" id="out_u"></path></defs></svg></div><div class="container container--two-column"><h2 class="section-header">Пробую издеваться над котиком... JS - CSS - SVG <span class="page-text--small">В IE не работает, но можно исправить.</span></h2><p data-height="265" data-theme-id="0" data-slug-hash="aPaxLo" data-default-tab="html,result" data-user="uzinok" data-pen-title="my cat" class="codepen">See the Pen <a href="https://codepen.io/uzinok/pen/aPaxLo/">my cat</a> by uzinok (<a href="https://codepen.io/uzinok">@uzinok</a>) on <a href="https://codepen.io">CodePen</a>.</p><script async="" src="https://static.codepen.io/assets/embed/ei.js"></script></div><div class="container container--two-column"><h2 class="section-header">Змейка, пока токля на клаве</h2><a href="./snake.html" class="btn btn--lg btn--success">ТИЦ</a></div><div class="container container--two-column"><h2 class="section-header">04/02/19 : JS - CSS // TweenMax.min.js // snap.svg-min.js<span class="page-text--small">Для работы в браузерах Apple и IE нужно подумать</span></h2><style>.block {
+            width: 100%;
+            max-width: 40vh;
+            min-height: 40vh;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 15px solid #580590;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s linear;
+          }
+
+          .block span,
+          .block svg {
+            font-size: 105px;
+            font-weight: bold;
+            color: #580590;
+            fill: #580590;
+            display: inline-block;
+            width: inherit;
+            transition: all 0.3s linear;
+          }
+
+          .block.block-active {
+            background-color: #580590;
+          }
+
+          .block.block-active span,
+          .block.block-active svg {
+            color: #ffffff;
+            fill: #ffffff;
+          }</style><script src="js/TweenMax.min.js"></script><script>$(document).ready(function (events) {
+            var targets = document.querySelectorAll('.block');
+
+            var tl = new TimelineMax();
+
+            tl.to("#y", 0.1, {
+              opacity: 0,
+              yoyo: true,
+              repeat: 3
+            });
+
+            tl.fromTo("#mask_rect_all", 1, {
+              y: 350,
+              height: 40
+            }, {
+              y: 0,
+              height: 487
+            });
+
+            tl.to("#mask_rect", 1, {
+              x: -235,
+            });
+
+            // PubSub.subscribe("go-letter-go", function () {
+            //   alert("go letter go");
+            // })
+
+            var options = {
+              rootMargin: '0px',
+              threshold: [1.0, 0.3, 0.5, 0.7]
+            }
+
+            var observer = new IntersectionObserver(items => {
+              items.forEach(el => {
+                if (el.isIntersecting && el.intersectionRatio > 0.7) {
+
+                  el.target.classList.add("block-active");
+                  // PubSub.publish("go-letter-go");
+
+                } else {
+                  el.target.classList.remove("block-active");
+                }
+              })
+            }, options);
+            for (var i = 0; i < targets.length; i++) {
+              observer.observe(targets[i]);
+            }
+
+          });</script><div class="block"><span>1</span></div><div class="block"><svg viewBox="0 0 482.6 487.1" id="y"><defs><!-- width="482.6px" height="487.1px" --><pattern fill="#9ddea6" x="0" y="0" width="20" height="12" id="svg_u_pattern" patternUnits="userSpaceOnUse"><path d="M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z"></path></pattern><mask maskUnits="userSpaceOnUse" id="mask"><g fill="#fff"><rect x="0" y="0" width="482.6px" height="487" id="mask_rect"></rect></g></mask><mask maskUnits="userSpaceOnUse" id="mask_all"><g fill="#fff"><rect x="0" y="0" width="482.6px" height="487.1px" id="mask_rect_all"></rect></g></mask></defs><g mask="url(#mask_all)"><g fill="url(#svg_u_pattern)"><path d="M292.2,273.3v169.4c0,9,1.8,15.9,5.3,20.7c3.5,4.8,9.9,8.8,19,12v11.7H166.1v-11.7c9.1-2.9,15.4-6.7,19-11.5
+                                    c3.5-4.8,5.3-11.8,5.3-21.1V273.3L64.2,74.7C50,52.4,38.7,37.2,30.2,28.9C21.7,20.7,11.7,15.1,0,12.2V0h191.8v12.2
+                                    c-16.5,4.9-24.7,13.8-24.7,26.5c0,6.4,6,19.1,17.9,38.2l61.8,98l60.4-98c11.9-19.4,17.9-32.3,17.9-38.7c0-12.2-8.1-20.9-24.3-26.1
+                                    L300.2,0h182.4v12.2c-11.7,2.9-21.7,8.5-30.2,16.7c-8.5,8.3-19.8,23.5-34,45.8L292.2,273.3z"></path></g><g mask="url(#mask)"><path d="M292.2,273.3v169.4c0,9,1.8,15.9,5.3,20.7c3.5,4.8,9.9,8.8,19,12v11.7H166.1v-11.7c9.1-2.9,15.4-6.7,19-11.5
+                                    c3.5-4.8,5.3-11.8,5.3-21.1V273.3L64.2,74.7C50,52.4,38.7,37.2,30.2,28.9C21.7,20.7,11.7,15.1,0,12.2V0h191.8v12.2
+                                    c-16.5,4.9-24.7,13.8-24.7,26.5c0,6.4,6,19.1,17.9,38.2l61.8,98l60.4-98c11.9-19.4,17.9-32.3,17.9-38.7c0-12.2-8.1-20.9-24.3-26.1
+                                    L300.2,0h182.4v12.2c-11.7,2.9-21.7,8.5-30.2,16.7c-8.5,8.3-19.8,23.5-34,45.8L292.2,273.3z"></path></g></g></svg></div></div></section></main><footer class="page-header container page-header--footer"><nav class="page-header__block-nav"><ul class="page-header__nav-list list-rezet"><li class="page-header__nav-item"><a href="/thoughts.html" class="page-header__nav-link">Думки</a></li></ul></nav><div class="page-header__block-logo"><a href="index.html"><svg width="60" height="60" class="page-header__logo-svg"><use xlink:href="#cat-logo"></use></svg></a></div></footer><div class="up-down-arrow__btn"></div></body></html>
