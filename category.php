@@ -11,24 +11,23 @@
 
 <div class="container-content">
 
+<section class="container container--column">
 <?php 
     if (have_posts()) {
         while (have_posts()) {
             the_post();
             ?>
-            <div>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								<p><?php the_time("F jS, Y"); ?><span><?php the_author(); ?></span></p>
-								<p><?php the_tags("", "/"); ?></p>
-								<?php the_post_thumbnail("thumbnail"); ?>
-                <?php the_excerpt(); ?>
+            <div class="container container--two-column">
+								<h2 class="section-header"><?php the_title(); ?></h2>
+								<p><?php the_excerpt(); ?></p>
+								<p class="section-tags"><?php the_tags("", " / "); ?></p>
             </div>
             <?php
 				}
 				the_posts_pagination();
     }
 ?>
-
+</section>
 
 
   <section class="container section buttons">

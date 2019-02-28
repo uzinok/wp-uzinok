@@ -22,7 +22,7 @@ function theme_register_nav_menu() {
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
 	function new_excerpt_more( $more ){
 		global $post;
-		return '<a href="'. get_permalink($post) . '">Читать дальше...</a>';
+		return '... <a class="post-link" href="' . get_permalink($post) . '">далее</a>';
 	}
 	// удаляет H2 из шаблона пагинации
 	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
@@ -37,7 +37,7 @@ function theme_register_nav_menu() {
 
 		return '
 		<nav class="navigation %1$s" role="navigation">
-			<div class="nav-links">%3$s</div>
+			%3$s
 		</nav>    
 		';
 	}
