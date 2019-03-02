@@ -1,11 +1,11 @@
 <footer class="page-header container page-header--footer page-header--lending" id="link">
     <div class="page-header__block-nav">
       <!-- <ul class="page-header__nav-list list-rezet">
-        <li class="menu-item"><a href="/demo-js.html">Демки JS</a></li>
-        <li class="menu-item"><a href="/demo-html-css-js.html">Демки CSS</a></li>
-        <li class="menu-item"><a href="/thoughts.html">Думки</a></li>
-        <li class="menu-item"><a href="/canvas_test.html">Демки canvas</a></li>
-        <li class="menu-item"><a href="/svg.html">Демки SVG</a></li>
+        <li class="menu-item"><a href="/demo-js.html">пїЅпїЅпїЅпїЅпїЅ JS</a></li>
+        <li class="menu-item"><a href="/demo-html-css-js.html">пїЅпїЅпїЅпїЅпїЅ CSS</a></li>
+        <li class="menu-item"><a href="/thoughts.html">пїЅпїЅпїЅпїЅпїЅ</a></li>
+        <li class="menu-item"><a href="/canvas_test.html">пїЅпїЅпїЅпїЅпїЅ canvas</a></li>
+        <li class="menu-item"><a href="/svg.html">пїЅпїЅпїЅпїЅпїЅ SVG</a></li>
       </ul> -->
 	  <?php wp_nav_menu(array(
                 "theme_location" => "footer",
@@ -34,8 +34,6 @@
   </footer>
   <div class="up-down-arrow__btn btn"></div>
 </body>
-<script src="<?php get_template_directory_uri(); ?>/wp-content/themes/wp_uzinok/assets/js/jquery.min.js"></script>
-<script src="<?php get_template_directory_uri(); ?>/wp-content/themes/wp_uzinok/assets/js/home_js.js"></script>
 <?php wp_footer(); ?>
 
 </html>

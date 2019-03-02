@@ -9,8 +9,11 @@
 
 <main class="page-main page-main--aside">
 
-<div class="container-content">
 
+<div class="container-content">
+<section class="container">
+	<?php the_content(); ?>
+</section>
 <section class="container container--column">
 <?php 
     if (have_posts()) {

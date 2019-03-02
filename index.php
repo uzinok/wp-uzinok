@@ -46,7 +46,7 @@
     </section>
     <section class="container" id="order-form">
         <h2 class="section-header">Оставьте сообщение</h2>
-        <form action="http://demo.uzinok.ru/php/feedback.php" class="order-form" id="form" method="POST">
+        <!-- <form action="http://demo.uzinok.ru/php/feedback.php" class="order-form" id="form" method="POST">
             <p class="order-form__title">Все поля обязательны для заполнения на русском! (кроме E-mail)</p><input name="name"
                 type="text" class="order-form__control order-form__input-text" placeholder="Имя *" required=""> <input
                 name="email" type="email" class="order-form__control order-form__input-text" placeholder="E-mail *"
@@ -57,7 +57,9 @@
                 <p class="alert__title">Ответ сервера</p>
                 <p class="alert__text"></p>
             </div><input class="order-form__submit btn" type="submit" value="отправить">
-        </form>
+        </form> -->
+
+        <?php print do_shortcode('[contact-form-7 id="59" title="Контактная форма 1"]'); ?>
     </section>
 </main>
 
