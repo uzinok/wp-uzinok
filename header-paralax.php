@@ -43,12 +43,6 @@
   </div>
   <header class="page-header container page-header--nojs page-header--lending">
     <menu class="page-header__block-nav page-header__block-nav--closed">
-      <!-- <ul class="page-header__nav-list list-rezet">
-        <li class="menu-item"><a href="#interesting" data-goto="#interesting">Интересное</a></li>
-        <li class="menu-item"><a href="#order-form" data-goto="#order-form">Написать</a></li>
-        <li class="menu-item"><a href="#link" data-goto="#link">Ссылки</a></li>
-      </ul> -->
-	  
 	  <?php wp_nav_menu(array(
                 "theme_location" => "top",
                 "container" => nul,

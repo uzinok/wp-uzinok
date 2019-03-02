@@ -19,16 +19,16 @@ function scripts_theme() {
 	} else {
 		wp_enqueue_script("theme_scripts", get_template_directory_uri() . "/assets/js/main.js");
 	}
-	// if (is_home()) {
-	// }
 }
 
 function theme_register_nav_menu() {
-    register_nav_menu("top", "Меню в шапке");
+	register_nav_menu("top", "Меню в шапке");
 	register_nav_menu("footer", "Меню в подвале сайта");
+	register_nav_menu("404_not_found", "Полное меню для 404 NOT FOUND");
 	add_theme_support("title-tag");
 	add_theme_support("post-thumbnails", array("post"));
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 	function new_excerpt_more( $more ){
 		global $post;
 		return '... <a class="post-link" href="' . get_permalink($post) . '">далее</a>';

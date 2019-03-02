@@ -9,7 +9,7 @@
 
 <main class="page-main page-main--aside">
 
-<div class="container-content">
+<div class="container container-content">
 
 <?php 
     if (have_posts()) {

@@ -49,15 +49,6 @@
         <button class="page-header__button-nav-toggle page-header__button-nav-toggle--closed"><span
                 class="visually-hidden">открыть/закрыть меню</span></button>
         <nav class="page-header__block-nav page-header__block-nav--closed">
-            <!-- <ul class="page-header__nav-list list-rezet">
-                <li class="page-header__nav-item"><a href="/authorisation.html" class="page-header__nav-link">Авторизация</a></li>
-                <li class="page-header__nav-item"><a href="/demo-js.html" class="page-header__nav-link">Демки JS</a></li>
-                <li class="page-header__nav-item"><a href="/demo-html-css-js.html" class="page-header__nav-link">Демки
-                        CSS</a></li>
-                <li class="page-header__nav-item"><a href="/canvas_test.html" class="page-header__nav-link">Демки
-                        canvas</a></li>
-                <li class="page-header__nav-item"><a href="/svg.html" class="page-header__nav-link">Демки SVG</a></li>
-            </ul> -->
             <?php wp_nav_menu(array(
                 "theme_location" => "top",
                 "container" => nul,

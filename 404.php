@@ -1,27 +1,25 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="page-title">
+	<div class="container">
+		<h1 class="page-title__text">Error - 404!</h1>
+		<p class="page-title__subtitle">
+			<?php esc_html_e( 'Ошибка!!! нет такой страницы. проверьте URL или воспользуйтесь поиском.', 'wp_uzinok' ); ?>
+		</p>
+	</div>
+</div>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp_uzinok' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp_uzinok' ); ?></p>
-
-					<?php
+<main class="page-main">
+	<div class="container-content">
+		<section class="container section">
+			<h2 class="section-header">Поиск</h2>
+			<?php
 					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
 					?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wp_uzinok' ); ?></h2>
-						<ul>
+					<h2 class="section-header">Свежие рубрики</h2>
+
+					<ul>
 							<?php
 							wp_list_categories( array(
 								'orderby'    => 'count',
@@ -32,20 +30,19 @@ get_header();
 							) );
 							?>
 						</ul>
-					</div><!-- .widget -->
 
-					<?php
-					/* translators: %1$s: smiley */
-					$wp_uzinok_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp_uzinok' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wp_uzinok_archive_content" );
+						<h2 class="section-header">Страницы</h2>
 
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+			<?php wp_nav_menu(array(
+                "theme_location" => "404",
+                "container" => null,
+                "menu_id" => "404",
+                "menu_class" => "",
+                "depth" => 2,
+            )); ?>
+		</section>
+	</div>
+</main>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
- <?php
+<?php
 get_footer();
