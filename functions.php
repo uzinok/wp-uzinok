@@ -4,6 +4,7 @@ add_action("wp_enqueue_scripts", "style_theme");
 add_action("wp_enqueue_scripts", "scripts_theme");
 add_action("after_setup_theme", "theme_register_nav_menu");
 add_action("widgets_init", "register_my_widgets");
+add_action('pre_get_posts', 'get_posts_search_filter');
 
 function style_theme() {
     wp_enqueue_style("style", get_stylesheet_uri());
@@ -25,6 +26,7 @@ function theme_register_nav_menu() {
 	register_nav_menu("top", "Меню в шапке");
 	register_nav_menu("footer", "Меню в подвале сайта");
 	register_nav_menu("404_not_found", "Полное меню для 404 NOT FOUND");
+	register_nav_menu("header_paralax", "Меню навигации по главной странице");
 	add_theme_support("title-tag");
 	add_theme_support("post-thumbnails", array("post"));
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
@@ -53,7 +55,7 @@ function theme_register_nav_menu() {
 
 	// выводим пагинацию
 	the_posts_pagination( array(
-		'end_size' => 2,
+		'end_size' => 10,
 	) ); 
 }
 
@@ -68,4 +70,21 @@ function register_my_widgets(){
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => "</h2>\n",
 	) );
+
+	register_sidebar( array(
+		'name' => "Right sidebar single",
+		'id' => "right_sidebar_single",
+		'description' => 'sidebar for single',
+		'class' => '',
+		'before_widget' => "<div>",
+		'after_widget' => "</div>",
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => "</h2>\n",
+	) );
+}
+
+function get_posts_search_filter( $query ){
+	if ( !is_admin() && $query->is_main_query() && $query->is_search ) {
+		$query->set('post_type', array('post') );
+	}
 }

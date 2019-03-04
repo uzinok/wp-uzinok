@@ -1,14 +1,7 @@
 <footer class="page-header container page-header--footer page-header--lending" id="link">
     <div class="page-header__block-nav">
-      <!-- <ul class="page-header__nav-list list-rezet">
-        <li class="menu-item"><a href="/demo-js.html">����� JS</a></li>
-        <li class="menu-item"><a href="/demo-html-css-js.html">����� CSS</a></li>
-        <li class="menu-item"><a href="/thoughts.html">�����</a></li>
-        <li class="menu-item"><a href="/canvas_test.html">����� canvas</a></li>
-        <li class="menu-item"><a href="/svg.html">����� SVG</a></li>
-      </ul> -->
-	  <?php wp_nav_menu(array(
-                "theme_location" => "footer",
+    <?php wp_nav_menu(array(
+                "theme_location" => "top",
                 "container" => nul,
                 "menu_id" => "top",
                 "menu_class" => "page-header__nav-list list-rezet",
@@ -28,7 +21,13 @@
         </svg> uzinok.ru</a></div>
     <div class="page-header__block-nav">
       <ul class="page-header__nav-list list-rezet">
-        <li class="menu-item"><a href="/shortcodes.html" style="opacity: 0.5;">Shortcodes</a></li>
+	  <?php wp_nav_menu(array(
+                "theme_location" => "footer",
+                "container" => nul,
+                "menu_id" => "top",
+                "menu_class" => "page-header__nav-list list-rezet",
+                "depth" => 1,
+            )); ?>
       </ul>
     </div>
   </footer>

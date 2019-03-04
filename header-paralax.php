@@ -10,12 +10,12 @@
   <meta itemprop="image" content="http://uzinok.ru/img/cat-logo_64.png">
   <meta name="twitter:image:src" content="http://uzinok.ru/img/cat-logo_64.png">
   <meta property="og:image" content="http://uzinok.ru/img/cat-logo_64.png">
-  
+
   <?php
-        wp_head();
-    ?>
-	
-	<link rel='stylesheet' href='http://demo.uzinok.ru/wp-content/themes/wp_uzinok/assets/css/home.css?ver=5.1' type='text/css' />
+wp_head();
+?>
+
+  <link rel='stylesheet' href='http://demo.uzinok.ru/wp-content/themes/wp_uzinok/assets/css/home.css?ver=5.1' type='text/css' />
 </head>
 
 <body>
@@ -43,13 +43,13 @@
   </div>
   <header class="page-header container page-header--nojs page-header--lending">
     <menu class="page-header__block-nav page-header__block-nav--closed">
-	  <?php wp_nav_menu(array(
-                "theme_location" => "top",
-                "container" => nul,
-                "menu_id" => "top",
-                "menu_class" => "page-header__nav-list list-rezet",
-                "depth" => 1,
-            )); ?>
+      <?php wp_nav_menu(array(
+"theme_location" => "header_paralax",
+"container" => nul,
+"menu_id" => "header_paralax",
+"menu_class" => "page-header__nav-list list-rezet",
+"depth" => 1,
+)); ?>
     </menu>
     <div class="page-header__block-logo"><a href="index.html" class="page-header__logo-text"><svg viewBox="0 0 14 13"
           width="60" height="60" class="page-header__logo-svg" id="my_cat">
@@ -61,7 +61,8 @@
           <ellipse class="pupils" fill="#303030" cx="4.8" cy="6.65" rx=".2" ry=".5"></ellipse>
           <ellipse class="pupils" fill="#303030" cx="9.2" cy="6.65" rx=".2" ry=".5"></ellipse>
           <path class="moustache" stroke="#303030" stroke-width=".25" stroke-miterlimit="10" d="M13.8 8.1l-1.1-.2m1.2 2l-1.8-.8m1.1 2.5L11 10.1M.3 8.1l1.3-.2M.1 9.8l2-.8M.9 11.5l2.3-1.4"></path>
-        </svg> <?php bloginfo("name"); ?></a></div><button class="page-header__button-nav-toggle page-header__button-nav-toggle--closed"><span
+        </svg>
+        <?php bloginfo("name"); ?></a></div><button class="page-header__button-nav-toggle page-header__button-nav-toggle--closed"><span
         class="visually-hidden">открыть/закрыть меню</span></button>
     <div class="page-title">
       <div class="container">
@@ -71,5 +72,7 @@
       </div>
     </div>
     <div class="page-title__block-btn"><a class="page-title__btn btn btn--default" href="#order-form" data-goto="#order-form"
-        title="перейти к форме обратной связи">Написать</a> <a href="/authorisation.html" class="page-title__btn page-title__btn--user">Авторизоваться</a></div>
+        title="перейти к форме обратной связи">Написать</a>
+      <!-- <a href="/authorisation.html" class="page-title__btn page-title__btn--user">Авторизоваться</a> -->
+    </div>
   </header>
