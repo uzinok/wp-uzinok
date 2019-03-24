@@ -14,7 +14,7 @@
       )); 
     ?>
   </nav>
-  <div class="page-header__block-logo"><a href="index.html"><svg width="60" height="60" class="page-header__logo-svg">
+  <div class="page-header__block-logo"><a href="<?php bloginfo("url"); ?>"><svg width="60" height="60" class="page-header__logo-svg">
     <use xlink:href="#cat-logo"></use>
   </svg></a></div>
 </footer>

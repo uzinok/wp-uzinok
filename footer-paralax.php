@@ -8,7 +8,7 @@
                 "depth" => 1,
             )); ?>
     </div>
-    <div class="page-header__block-logo"><a href="index.html" class="page-header__logo-text"><svg viewBox="0 0 14 13"
+    <div class="page-header__block-logo"><a href="<?php bloginfo("url"); ?>" class="page-header__logo-text"><svg viewBox="0 0 14 13"
           width="60" height="60" class="page-header__logo-svg">
           <path class="cat" fill="#303030" d="M12.9 6.9c0 2.5-2.6 4.7-5.7 4.7S1.4 9.4 1.4 6.9c0-1 .3-1.9 1-2.7.6-.7 1.5-1.3 2.5-1.6.7-.2 1.5-.3 2.3-.3 3.1-.1 5.7 2 5.7 4.6z"></path>
           <path class="ear1" fill="#303030" d="M11.6,0.8c0.4,1.1,0.3,2.3,0,3.4L9.1,2.8C10.2,1.7,11.1,0.9,11.6,0.8z"></path>

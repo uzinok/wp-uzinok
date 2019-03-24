@@ -5,17 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="http://uzinok.ru/img/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="http://uzinok.ru/img/favicon.ico" type="image/x-icon">
-  <meta itemprop="image" content="http://uzinok.ru/img/cat-logo_64.png">
-  <meta name="twitter:image:src" content="http://uzinok.ru/img/cat-logo_64.png">
-  <meta property="og:image" content="http://uzinok.ru/img/cat-logo_64.png">
+    <link href="http://cdn.uzinok.ru/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://cdn.uzinok.ru/img/favicon.ico" type="image/x-icon">
+    <meta itemprop="image" content="http://cdn.uzinok.ru/img/cat-logo_64.png">
+    <meta name="twitter:image:src" content="http://cdn.uzinok.ru/img/cat-logo_64.png">
+    <meta property="og:image" content="http://cdn.uzinok.ru/img/cat-logo_64.png">
 
   <?php
 wp_head();
 ?>
 
-  <link rel='stylesheet' href='http://demo.uzinok.ru/wp-content/themes/wp_uzinok/assets/css/home.css?ver=5.1' type='text/css' />
 </head>
 
 <body>
@@ -43,15 +42,13 @@ wp_head();
   </div>
   <header class="page-header container page-header--nojs page-header--lending">
     <menu class="page-header__block-nav page-header__block-nav--closed">
-      <?php wp_nav_menu(array(
-"theme_location" => "header_paralax",
-"container" => nul,
-"menu_id" => "header_paralax",
-"menu_class" => "page-header__nav-list list-rezet",
-"depth" => 1,
-)); ?>
+      <ul class="page-header__nav-list list-rezet" id="header_paralax">
+        <li class="menu-item"><a href="#interesting" data-goto="#interesting">Интересное</a></li>
+        <li class="menu-item"><a href="#order-form" data-goto="#order-form">Написать</a></li>
+        <li class="menu-item"><a href="#link" data-goto="#link">Ссылки</a></li>
+      </ul>
     </menu>
-    <div class="page-header__block-logo"><a href="index.html" class="page-header__logo-text"><svg viewBox="0 0 14 13"
+    <div class="page-header__block-logo"><a href="<?php bloginfo("url"); ?>" class="page-header__logo-text"><svg viewBox="0 0 14 13"
           width="60" height="60" class="page-header__logo-svg" id="my_cat">
           <path class="cat" fill="#303030" d="M12.9 6.9c0 2.5-2.6 4.7-5.7 4.7S1.4 9.4 1.4 6.9c0-1 .3-1.9 1-2.7.6-.7 1.5-1.3 2.5-1.6.7-.2 1.5-.3 2.3-.3 3.1-.1 5.7 2 5.7 4.6z"></path>
           <path class="ear1" fill="#303030" d="M11.6,0.8c0.4,1.1,0.3,2.3,0,3.4L9.1,2.8C10.2,1.7,11.1,0.9,11.6,0.8z"></path>

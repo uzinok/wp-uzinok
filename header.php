@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="http://uzinok.ru/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="http://uzinok.ru/img/favicon.ico" type="image/x-icon">
-    <meta itemprop="image" content="http://uzinok.ru/img/cat-logo_64.png">
-    <meta name="twitter:image:src" content="http://uzinok.ru/img/cat-logo_64.png">
-    <meta property="og:image" content="http://uzinok.ru/img/cat-logo_64.png">
+    <link href="http://cdn.uzinok.ru/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://cdn.uzinok.ru/img/favicon.ico" type="image/x-icon">
+    <meta itemprop="image" content="http://cdn.uzinok.ru/img/cat-logo_64.png">
+    <meta name="twitter:image:src" content="http://cdn.uzinok.ru/img/cat-logo_64.png">
+    <meta property="og:image" content="http://cdn.uzinok.ru/img/cat-logo_64.png">
     <?php
         wp_head();
     ?>

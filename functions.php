@@ -10,7 +10,7 @@ function style_theme() {
     wp_enqueue_style("style", get_stylesheet_uri());
 	wp_enqueue_style("theme_style", get_template_directory_uri() . "/assets/css/style.css");
 	if (is_home()) {
-		wp_enqueue_style("theme_style", get_template_directory_uri() . "/assets/css/home.css");
+		wp_enqueue_style("theme_style_home", get_template_directory_uri() . "/assets/css/home.css");
 	}
 }
 
@@ -26,14 +26,13 @@ function theme_register_nav_menu() {
 	register_nav_menu("top", "Меню в шапке");
 	register_nav_menu("footer", "Меню в подвале сайта");
 	register_nav_menu("404_not_found", "Полное меню для 404 NOT FOUND");
-	register_nav_menu("header_paralax", "Меню навигации по главной странице");
 	add_theme_support("title-tag");
 	add_theme_support("post-thumbnails", array("post"));
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 	function new_excerpt_more( $more ){
 		global $post;
-		return '... <a class="post-link" href="' . get_permalink($post) . '">далее</a>';
+		return '...';
 	}
 	// удаляет H2 из шаблона пагинации
 	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
@@ -88,3 +87,12 @@ function get_posts_search_filter( $query ){
 		$query->set('post_type', array('post') );
 	}
 }
+
+function hello_world_cf7_func() {
+	 return "[bws_google_captcha]";
+}
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';

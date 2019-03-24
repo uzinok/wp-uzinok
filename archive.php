@@ -1,21 +1,22 @@
-<?php get_header(); ?>
-<?php if ( have_posts() ) : ?>
+<?php
+get_header();
+?>
+
+		<?php if ( have_posts() ) : ?>
 
 <div class="page-title">
 	<div class="container">
-		<?php the_archive_title( '<h1 class="page-title__text">', '</h1>' ); ?>
+			<?php the_archive_title( '<h1 class="page-title__text">', '</h1>' );
+		
+		the_archive_description( '', '' ); ?>
 	</div>
-	<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 </div>
-
-
 
 <main class="page-main page-main--aside">
 
 
 	<div class="container-content">
-		<section class="container">
-
+		<section class="container container--column">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
